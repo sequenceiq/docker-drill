@@ -32,4 +32,4 @@ Once the volume is mounted you can access the Drill UI at http://CONTAINER_IP:80
 
 Get Drillbit status: `http://localhost:8047/status`       
 Get all submitted queries: `http://localhost:8047/queries`       
-|Get status of given query:`http://localhost:8047/query/{QUERY_ID}`
+Get status of given query:`http://localhost:8047/query/{QUERY_ID}`
