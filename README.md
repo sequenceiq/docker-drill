@@ -9,6 +9,10 @@ docker build -t sequenceiq/drill .
 
 docker pull sequenceiq/drill
 
-###Run the container
+###Run the container 
 
-docker run -i -t -v /sample-data:/sample-data  sequenceiq/drill /etc/bootstrap.sh
+docker run -it sequenceiq/drill /etc/bootstrap.sh
+
+###Run the container with volume
+
+docker run -it -v /data:/data sequenceiq/drill /etc/bootstrap.sh
