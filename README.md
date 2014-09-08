@@ -27,3 +27,9 @@ For a more comprehensive Drill experience you can query data external to your co
 Once the volume is mounted you can access the Drill UI at http://CONTAINER_IP:8047, you can either add a new file system based storage plugin workspace pointing to the mounted folder, or use the default file system storage workspace.
 
 `docker run -it -v /data:/data sequenceiq/drill /etc/bootstrap.sh`
+
+###Rest API
+
+Get Drillbit status: `http://localhost:8047/status`       
+Get all submitted queries: `http://localhost:8047/queries`       
+|Get status of given query:`http://localhost:8047/query/{QUERY_ID}`
