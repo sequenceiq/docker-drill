@@ -33,3 +33,5 @@ Once the volume is mounted you can access the Drill UI at http://CONTAINER_IP:80
 Get Drillbit status: `http://CONTAINER_IP:8047/status`       
 Get all submitted queries: `http://CONTAINER_IP:8047/queries`       
 Get status of a given query:`http://CONTAINER_IP:8047/query/{QUERY_ID}`
+
+_Note: you can find your container IP by running docker inspect CONTAINER_ID_
