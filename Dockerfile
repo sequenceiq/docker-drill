@@ -5,13 +5,13 @@ MAINTAINER SequenceIQ
 RUN apt-get install -y wget tar sudo
 
 # get drill
-RUN wget http://xenia.sote.hu/ftp/mirrors/www.apache.org/incubator/drill/drill-0.4.0-incubating/apache-drill-0.4.0-incubating.tar.gz
-
+#RUN wget http://xenia.sote.hu/ftp/mirrors/www.apache.org/incubator/drill/drill-0.5.0-incubating/apache-drill-0.5.0-incubating.tar.gz
+RUN wget http://getdrill.org/drill/download/apache-drill-0.5.0-incubating.tar.gz
 # create Drill folder
 RUN sudo mkdir -p /opt/drill
 
 # extract Drill
-RUN sudo tar -xvzf apache-drill-0.4.0-incubating.tar.gz -C /opt/drill
+RUN sudo tar -xvzf apache-drill-0.5.0-incubating.tar.gz -C /opt/drill
 
 # add boostrap.sh
 ADD bootstrap.sh /etc/bootstrap.sh
