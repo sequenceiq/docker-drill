@@ -1,16 +1,20 @@
-FROM dockerfile/java:oracle-java7
+#FROM dockerfile/java:oracle-java7
+FROM java:7
 MAINTAINER SequenceIQ
 
 # install dev tools
-RUN apt-get install -y wget tar sudo
+RUN apt-get update && apt-get install -y wget tar sudo
 
 # get drill
-RUN wget http://getdrill.org/drill/download/apache-drill-0.6.0-incubating.tar.gz
+RUN wget http://www-us.apache.org/dist/drill/drill-1.8.0/apache-drill-1.8.0.tar.gz
 # create Drill folder
 RUN sudo mkdir -p /opt/drill
 
 # extract Drill
-RUN sudo tar -xvzf apache-drill-0.6.0-incubating.tar.gz -C /opt/drill
+RUN sudo tar -xvzf apache-drill-1.8.0.tar.gz -C /opt/drill
+
+# rename apache drill folder
+RUN sudo mv /opt/drill/apache-drill-1.8.0 /opt/drill/apache-drill
 
 # add boostrap.sh
 ADD bootstrap.sh /etc/bootstrap.sh
